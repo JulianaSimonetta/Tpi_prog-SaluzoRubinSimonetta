@@ -4,14 +4,30 @@ public class Turno {
     private Actividad actividad;
     private int cupoMax;
     private String fecha;
-    private int cantCuposDisponibles;
+    private int cuposDisponibles;
 
-    public Turno(int codigo, Actividad actividad, int cupoMax, String fecha, int cantCuposDisponibles) {
+    public Turno(int codigo, Actividad actividad, int cupoMax, String fecha, int cuposDisponibles) {
         this.codigo = codigo;
         this.actividad = actividad;
         this.cupoMax = cupoMax;
         this.fecha = fecha;
-        this.cantCuposDisponibles = cantCuposDisponibles;
+        this.cuposDisponibles = cuposDisponibles;
+    }
+
+    public void mostrarTurno(){
+        System.out.println("");
+        System.out.println("===============================================");
+        System.out.println("                       TURNO                   ");
+        System.out.println("===============================================");
+        System.out.println("- Código: " + getCodigo());
+        //System.out.println("- Actividad: ");
+            actividad.mostrarActividad();
+        System.out.println("- Cupo máximo: " + getCupoMax());
+        System.out.println("- Cupos disponibles: " + getCuposDisponibles());
+        System.out.println("- Fecha: " + getFecha());
+        System.out.println("- Reservas: " + (getCupoMax() - getCuposDisponibles()));
+        System.out.println("");
+        System.out.println("");
     }
 
     public int getCodigo() {
@@ -46,11 +62,11 @@ public class Turno {
         this.fecha = fecha;
     }
 
-    public int getCantCuposDisponibles() {
-        return cantCuposDisponibles;
+    public int getCuposDisponibles() {
+        return cuposDisponibles;
     }
 
-    public void setCantCuposDisponibles(int cantCuposDisponibles) {
-        this.cantCuposDisponibles = cantCuposDisponibles;
+    public void setCuposDisponibles(int cuposDisponibles) {
+        this.cuposDisponibles = cuposDisponibles;
     }
 }

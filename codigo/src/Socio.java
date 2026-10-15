@@ -10,6 +10,25 @@ public class Socio extends Persona {
         this.creditos = creditos;
     }
 
+    public void mostrarSocio(){
+        System.out.println("");
+        System.out.println("===============================================");
+        System.out.println("                       SOCIO                   ");
+        System.out.println("===============================================");
+        System.out.println("- Nombre: " + getNombre() );
+        System.out.println("- Apellido: " + getApellido());
+        System.out.println("- Fecha alta: " + getFechaAlta() );
+        System.out.println("- Fecha baja: " + getFechaBaja() );
+        System.out.println("- TipoDocumento: " + getTipoDocumento().getDescripcion() );
+        System.out.println("- Documento: " + getDocumento() );
+        System.out.println("- Telefono: " + getTelefono());
+        System.out.println("- Estado: " +  getEstado());
+        System.out.println("- Creditos: " + verCreditos());
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+    }
+
     public int getTelefono() {
         return telefono;
     }
@@ -18,15 +37,15 @@ public class Socio extends Persona {
         this.telefono = telefono;
     }
 
-    public boolean isEstado() {
+    public boolean getEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void cambiarEstado (boolean estado) {
         this.estado = estado;
     }
 
-    public int getCreditos() {
+    public int verCreditos() {
         return creditos;
     }
 
